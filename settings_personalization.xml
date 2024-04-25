@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<data>
+	<!--path to the folder the scaled model with default constraints is stored-->
+	<folder_model_input>C:/Users/Jennifer Maier/Documents/Research/Studies/2022-06-PilotStudy/Data/09262022_subject1/Model/</folder_model_input>
+	<!--filename of the scaled model with default constraints (including '.osim')-->
+	<filename_model_input>ISB_bivariate_tm_musclesSeth_subject1.osim</filename_model_input>
+	<!--path to the folder the personalized model will be stored-->
+	<folder_model_output>C:/Users/Jennifer Maier/Documents/Research/Studies/2022-06-PilotStudy/Data/09262022_subject1/Model/</folder_model_output>
+	<!--filename the personalized model will be saved as (including '.osim')-->
+	<filename_model_output>ISB_bivariate_tm_musclesSeth_subject1_personalized.osim</filename_model_output>
+	<!--OpenSim model name-->
+	<model_output_name>ISB_bivariate_tm_musclesSeth_subject1_personalized</model_output_name>
+	<!--folder in which all .trc marker files are stored-->
+	<folder_trc>C:/Users/Jennifer Maier/Documents/Research/Studies/2022-06-PilotStudy/Data/09262022_subject1/</folder_trc>
+	<!--filenames of the five marker data files used for the personalization of the scapulohumeral rhythm of the right shoulder-->
+	<filenames_calibration_right>
+		<abd0>Trimmed_right_abd_001_rotated.trc</abd0>
+		<abd180>Trimmed_right_abd_18001_rotated.trc</abd180>
+		<flex180>Trimmed_right_flex_18001_rotated.trc</flex180>
+		<horiz_abd>Trimmed_right_horiz_abd01_rotated.trc</horiz_abd>
+		<horiz_add>Trimmed_right_horiz_add01_rotated.trc</horiz_add>
+	</filenames_calibration_right>
+	<!--filenames of the five marker data files used for the personalization of the scapulohumeral rhythm of the left shoulder-->
+	<filenames_calibration_left>
+		<abd0>Trimmed_left_abd_001_rotated.trc</abd0>
+		<abd180>Trimmed_left_abd_18001_rotated.trc</abd180>
+		<flex180>Trimmed_left_flex_18001_rotated.trc</flex180>
+		<horiz_abd>Trimmed_left_horiz_abd01_rotated.trc</horiz_abd>
+		<horiz_add>Trimmed_left_horiz_add01_rotated.trc</horiz_add>
+	</filenames_calibration_left>
+	<!--names of the upper body markers in your study protocol.-->
+	<marker_names>
+		<IJ>Sternum</IJ>
+		<C7>C7</C7>
+		<PX>PX</PX>
+		<T8>T8</T8>
+		<TS_r>ts_r</TS_r>
+		<AI_r>ai_r</AI_r>
+		<AA_r>aa_r</AA_r>
+		<EL_r>r_elbow_lateral</EL_r>
+		<EM_r>r_elbow_medial</EM_r>
+		<upperarm_tracking_marker_r>r_humerous</upperarm_tracking_marker_r>
+		<TS_l>ts_l</TS_l>
+		<AI_l>ai_l</AI_l>
+		<AA_l>aa_l</AA_l>
+		<EL_l>l_elbow_lateral</EL_l>
+		<EM_l>l_elbow_medial</EM_l>
+		<upperarm_tracking_marker_l>l_humerous</upperarm_tracking_marker_l>
+	</marker_names>
+	<!--flag indicating if a model with personalized constraints but with unconstrained clavicle elevation should be created-->
+	<create_clavicle_elevation_model>True</create_clavicle_elevation_model>
+	<!--filename of the model with personalized constraints but with unconstrained clavicle elevation; only needed if flag above is set to True-->
+	<filename_model_clav_output>ISB_bivariate_tm_musclesSeth_subject1_personalized_clavtrack.osim</filename_model_clav_output>
+	<!--flag indicating if your palpated and measured scapula markers need to be moved from the scapula locator L-frame tool onto the skin.
+	This needs to be true if the locator had pins that were placed on the skin locations but led to the measured markers being at a small distance from the skin. -->
+	<move_scapula_markers_to_skin>True</move_scapula_markers_to_skin>
+	<!--In your scapula locator L-Frame: distance from skin to bottom of markers; only needed if flag above is set to True-->
+	<scapula_distance>57</scapula_distance>
+	<!--In your scapula locator L-Frame: names of the markers on the locator, can be the same or different from the marker names defined above; only needed if flag above is set to True-->
+	<marker_names_scapula_tool>
+		<AA>AA</AA>
+		<AI>AI</AI>
+		<TS>TS</TS>
+	</marker_names_scapula_tool>
+	<!--flag indicating if coordinate ranges should be extended (for overhead sports analysis)-->
+	<extend_coordinate_ranges>True</extend_coordinate_ranges>
+</data>

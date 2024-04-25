@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<data>
+	<!--path to the folder the unscaled model is stored-->
+	<folder_model_input>C:/Users/Jennifer Maier/Documents/Research/Upperbody_Saul/Model_personalization_pipeline/</folder_model_input>
+	<!--filename of the unscaled model (including '.osim')-->
+	<filename_model_input>ISB_bivariate_tm_musclesSeth.osim</filename_model_input>
+	<!--path to the folder in which the scale setup is stored-->
+	<folder_scale_setup>C:/Users/Jennifer Maier/Documents/Research/Studies/2022-06-PilotStudy/Data/</folder_scale_setup>
+	<!--filename of the scale setup (including .xml)-->
+	<filename_scale_setup>scale_saul_UPDATED_scapMarker.xml</filename_scale_setup>
+	<!--path to the folder the scaled model will be stored-->
+	<folder_model_output>C:/Users/Jennifer Maier/Documents/Research/Studies/2022-06-PilotStudy/Data/09262022_subject1/Model/</folder_model_output>
+	<!--filename the scaled model will be saved as (including '.osim')-->
+	<filename_model_scaled>ISB_bivariate_tm_musclesSeth_subject1.osim</filename_model_scaled>
+	<!--folder in which all .trc marker files are stored-->
+	<folder_trc>C:/Users/Jennifer Maier/Documents/Research/Studies/2022-06-PilotStudy/Data/09262022_subject1/</folder_trc>
+	<!--filenames of the marker data file used for scaling (neutral pose)-->
+	<filename_scalingfile>scalingfile_saul8.trc</filename_scalingfile>
+	<!--time range in scaling file to use for scaling-->
+	<time_range>0.2 0.21</time_range>
+	<!--filenames of the five marker data files used for the personalization of the scapulohumeral rhythm of the right shoulder-->
+	<filenames_calibration_right>
+		<abd0>Trimmed_right_abd_001_rotated.trc</abd0>
+		<abd180>Trimmed_right_abd_18001_rotated.trc</abd180>
+		<flex180>Trimmed_right_flex_18001_rotated.trc</flex180>
+		<horiz_abd>Trimmed_right_horiz_abd01_rotated.trc</horiz_abd>
+		<horiz_add>Trimmed_right_horiz_add01_rotated.trc</horiz_add>
+	</filenames_calibration_right>
+	<!--filenames of the five marker data files used for the personalization of the scapulohumeral rhythm of the left shoulder-->
+	<filenames_calibration_left>
+		<abd0>Trimmed_left_abd_001_rotated.trc</abd0>
+		<abd180>Trimmed_left_abd_18001_rotated.trc</abd180>
+		<flex180>Trimmed_left_flex_18001_rotated.trc</flex180>
+		<horiz_abd>Trimmed_left_horiz_abd01_rotated.trc</horiz_abd>
+		<horiz_add>Trimmed_left_horiz_add01_rotated.trc</horiz_add>
+	</filenames_calibration_left>
+	<!--names of the upper body markers in your study protocol.-->
+	<marker_names>
+		<IJ>Sternum</IJ>
+		<C7>C7</C7>
+		<PX>PX</PX>
+		<T8>T8</T8>
+		<TS_r>ts_r</TS_r>
+		<AI_r>ai_r</AI_r>
+		<AA_r>aa_r</AA_r>
+		<Acromion_r>r_AMC2</Acromion_r>
+		<EL_r>r_elbow_lateral</EL_r>
+		<EM_r>r_elbow_medial</EM_r>
+		<upperarm_tracking_marker_r>r_humerous</upperarm_tracking_marker_r>
+		<wrist_ulna_r>r_wrist_ulna</wrist_ulna_r>
+		<wrist_radius_r>r_wrist_radius</wrist_radius_r>
+		<forearm_tracking_marker_r>r_forearm</forearm_tracking_marker_r>
+		<TS_l>ts_l</TS_l>
+		<AI_l>ai_l</AI_l>
+		<AA_l>aa_l</AA_l>
+		<Acromion_l>l_AMC2</Acromion_l>
+		<EL_l>l_elbow_lateral</EL_l>
+		<EM_l>l_elbow_medial</EM_l>
+		<upperarm_tracking_marker_l>l_humerous</upperarm_tracking_marker_l>
+		<wrist_ulna_l>l_wrist_ulna</wrist_ulna_l>
+		<wrist_radius_l>l_wrist_radius</wrist_radius_l>
+		<forearm_tracking_marker_l>l_forearm</forearm_tracking_marker_l>
+	</marker_names>
+	<!--flag indicating if your palpated and measured scapula markers need to be moved from the scapula locator L-frame tool onto the skin.
+	This needs to be true if the locator had pins that were placed on the skin locations but led to the measured markers being at a small distance from the skin. -->
+	<move_scapula_markers_to_skin>True</move_scapula_markers_to_skin>
+	<!--In your scapula locator L-Frame: distance from skin to bottom of markers; only needed if flag above is set to True-->
+	<scapula_distance>57</scapula_distance>
+	<!--In your scapula locator L-Frame: names of the markers on the locator, can be the same or different from the marker names defined above; only needed if flag above is set to True-->
+	<marker_names_scapula_tool>
+		<AA>AA</AA>
+		<AI>AI</AI>
+		<TS>TS</TS>
+	</marker_names_scapula_tool>
+	<!--flag indicating if the ISB coordinate systems should be updated after scaling (recommended for model personalization)-->
+	<update_ISB_coordinate_systems>True</update_ISB_coordinate_systems>
+</data>

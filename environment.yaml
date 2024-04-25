@@ -1,0 +1,11 @@
+# environment.yaml
+
+name: env-shoulder
+channels:
+  - conda-forge
+  - opensim-org
+dependencies:
+  - numpy==1.23.5
+  - opensim==4.5
+  - scipy==1.11.4
+  - sympy==1.12
