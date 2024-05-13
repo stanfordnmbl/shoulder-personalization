@@ -1,38 +1,38 @@
 <?xml version="1.0"?>
 <data>
 	<!--path to the folder the unscaled model is stored-->
-	<folder_model_input>C:/Users/Jennifer Maier/Documents/Research/Upperbody_Saul/Model_personalization_pipeline/</folder_model_input>
+	<folder_model_input>path/to/folder/</folder_model_input>
 	<!--filename of the unscaled model (including '.osim')-->
-	<filename_model_input>ISB_bivariate_tm_musclesSeth.osim</filename_model_input>
+	<filename_model_input>model.osim</filename_model_input>
 	<!--path to the folder in which the scale setup is stored-->
-	<folder_scale_setup>C:/Users/Jennifer Maier/Documents/Research/Studies/2022-06-PilotStudy/Data/</folder_scale_setup>
+	<folder_scale_setup>path/to/folder/</folder_scale_setup>
 	<!--filename of the scale setup (including .xml)-->
-	<filename_scale_setup>scale_saul_UPDATED_scapMarker.xml</filename_scale_setup>
+	<filename_scale_setup>scale_setup.xml</filename_scale_setup>
 	<!--path to the folder the scaled model will be stored-->
-	<folder_model_output>C:/Users/Jennifer Maier/Documents/Research/Studies/2022-06-PilotStudy/Data/09262022_subject1/Model/</folder_model_output>
+	<folder_model_output>path/to/folder/</folder_model_output>
 	<!--filename the scaled model will be saved as (including '.osim')-->
-	<filename_model_scaled>ISB_bivariate_tm_musclesSeth_subject1.osim</filename_model_scaled>
+	<filename_model_scaled>model_scaled.osim</filename_model_scaled>
 	<!--folder in which all .trc marker files are stored-->
-	<folder_trc>C:/Users/Jennifer Maier/Documents/Research/Studies/2022-06-PilotStudy/Data/09262022_subject1/</folder_trc>
+	<folder_trc>path/to/folder/</folder_trc>
 	<!--filenames of the marker data file used for scaling (neutral pose)-->
-	<filename_scalingfile>scalingfile_saul8.trc</filename_scalingfile>
+	<filename_scalingfile>scalingfile.trc</filename_scalingfile>
 	<!--time range in scaling file to use for scaling-->
-	<time_range>0.2 0.21</time_range>
+	<time_range>0 0.01</time_range>
 	<!--filenames of the five marker data files used for the personalization of the scapulohumeral rhythm of the right shoulder-->
 	<filenames_calibration_right>
-		<abd0>Trimmed_right_abd_001_rotated.trc</abd0>
-		<abd180>Trimmed_right_abd_18001_rotated.trc</abd180>
-		<flex180>Trimmed_right_flex_18001_rotated.trc</flex180>
-		<horiz_abd>Trimmed_right_horiz_abd01_rotated.trc</horiz_abd>
-		<horiz_add>Trimmed_right_horiz_add01_rotated.trc</horiz_add>
+		<abd0>right_abd0.trc</abd0>
+		<abd180>right_abd180.trc</abd180>
+		<flex180>right_flex180.trc</flex180>
+		<horiz_abd>right_horiz_abd.trc</horiz_abd>
+		<horiz_add>right_horiz_add.trc</horiz_add>
 	</filenames_calibration_right>
 	<!--filenames of the five marker data files used for the personalization of the scapulohumeral rhythm of the left shoulder-->
 	<filenames_calibration_left>
-		<abd0>Trimmed_left_abd_001_rotated.trc</abd0>
-		<abd180>Trimmed_left_abd_18001_rotated.trc</abd180>
-		<flex180>Trimmed_left_flex_18001_rotated.trc</flex180>
-		<horiz_abd>Trimmed_left_horiz_abd01_rotated.trc</horiz_abd>
-		<horiz_add>Trimmed_left_horiz_add01_rotated.trc</horiz_add>
+		<abd0>left_abd0.trc</abd0>
+		<abd180>left_abd180.trc</abd180>
+		<flex180>left_flex180.trc</flex180>
+		<horiz_abd>left_horiz_abd.trc</horiz_abd>
+		<horiz_add>left_horiz_add.trc</horiz_add>
 	</filenames_calibration_left>
 	<!--names of the upper body markers in your study protocol.-->
 	<marker_names>

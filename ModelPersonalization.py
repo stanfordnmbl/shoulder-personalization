@@ -123,6 +123,7 @@ for left_right in ['right', 'left']:
         # update constraint coefficients
         lf.setCoefficients(ad)
 
+# extend the coordinate ranges (if using personalized model for high ROM analysis)
 if extend_coordinate_ranges:
     personalization.extend_coordinate_ranges(model)
 

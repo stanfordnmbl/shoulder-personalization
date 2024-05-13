@@ -51,7 +51,7 @@ folder_model_output = root.find('folder_model_output').text
 filename_model_scaled = root.find('filename_model_scaled').text
 path_model_scaled = os.path.join(folder_model_output, filename_model_scaled)
 
-# constraint names
+# marker names
 marker_names = {'Sternum': root.find('marker_names').find('IJ').text,
                 'C7': root.find('marker_names').find('C7').text,
                 'PX': root.find('marker_names').find('PX').text,
@@ -93,17 +93,19 @@ else:
 # MODEL SCALING
 ########################################################################################################################
 
-# pre-compute humerus scale factor using calibration files
-# calibrate GH joint center computation
+# right arm: use calibaration files to calibrate glenohumeral joint center computation
 [g_humerus, _] = score.calibrate_score(folder_trc, filenames_calibration_right, 'right', marker_names,
                                        move_scapula_markers_to_skin, scapula_distance, marker_names_scapula_tool)
+# right arm: pre-compute humerus scale factor using calibration files
 humerus_scale_factor_r = score.compute_humerus_scale_factor(path_model_input, folder_trc, filenames_calibration_right,
                                                             'right', g_humerus, marker_names,
                                                             move_scapula_markers_to_skin, scapula_distance,
                                                             marker_names_scapula_tool)
 
+# left arm: use calibaration files to calibrate glenohumeral joint center computation
 [g_humerus, _] = score.calibrate_score(folder_trc, filenames_calibration_left, 'left', marker_names,
                                        move_scapula_markers_to_skin, scapula_distance, marker_names_scapula_tool)
+# left arm: pre-compute humerus scale factor using calibration files
 humerus_scale_factor_l = score.compute_humerus_scale_factor(path_model_input, folder_trc, filenames_calibration_left,
                                                             'left', g_humerus, marker_names,
                                                             move_scapula_markers_to_skin, scapula_distance,
@@ -111,16 +113,14 @@ humerus_scale_factor_l = score.compute_humerus_scale_factor(path_model_input, fo
 
 humerus_scale_factors = {'r': humerus_scale_factor_r, 'l': humerus_scale_factor_l}
 
-# scale ISB coord sys model and update shoulder coordinate systems after scaling
+# scale model
 scaling.scale_model(path_scale_setup_in, path_model_input, path_scalingfile, path_model_scaled, humerus_scale_factors,
                     time_range)
 
+# update ISB shoulder coordinate systems after scaling
 if root.find('update_ISB_coordinate_systems').text:
     cs.update_isb_coords(path_model_scaled)
 
-################################################################################################################
-# Correct the position of the tracking markers on the humerus and forearm
-################################################################################################################
-
+# correct the position of the tracking markers on the humerus and forearm
 mot_scaling_ISB = path_model_scaled.replace('.osim', '_scale.mot')
 scaling.correct_tracking_markers(path_model_scaled, path_scalingfile, mot_scaling_ISB, marker_names)
