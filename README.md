@@ -35,6 +35,12 @@ Inputs:
 
 Outputs: Model with personalized shoulder rhythm constraints; optional: Model with personalized shoulder rhythm constraints and independent clavicle elevation motion.
 
+## Usage
+1. Download the generic model from https://simtk.org/projects/shoulder-perso. Use your own motion capture data or download the provided dataset.
+2. Download or clone this repository, and setup your environment using the provided *environment.yaml* or *requirements.txt* files.
+3. Model scaling: update the file *settings_scaling.xml* with your paths, filenames, and parameters. Run *ModelScaling.py* using *settings_scaling.xml* as input argument
+4. Model personalization: update the file *settings_personalization.xml* with your paths, filenames, and parameters. Run *ModelPersonalization.py* using *settings_personalization.xml* as input argument
+
 ## References
 [1] Holzbaur KR, Murray WM, Delp SL.: A model of the upper extremity for simulating musculoskeletal surgery and analyzing neuromuscular control., Ann Biomed Eng. 2005 Jun;33(6):829-40. (2005)         
 [2] Saul KR, Hu X, Goehler CM, Daly M, Vidt ME, Velisar A, Murray WM. Benchmarking of dynamic simulation predictions in two software platforms using an upper limb musculoskeletal model. Computer Methods in Biomechanics and Biomedical Engineering. 2015; 18:1445-58. 10.1080/10255842.2014.916698 (2015)            
