@@ -24,6 +24,8 @@ path_model_input = os.path.join(folder_model_input, filename_model_input)
 
 # output model
 folder_model_output = root.find('folder_model_output').text
+if not os.path.exists(folder_model_output):  # create path if it doesn't exist
+    os.makedirs(folder_model_output)
 filename_model_output = root.find('filename_model_output').text
 path_model_output = os.path.join(folder_model_output, filename_model_output)
 model_output_name = root.find('model_output_name').text

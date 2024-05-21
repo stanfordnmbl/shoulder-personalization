@@ -48,6 +48,8 @@ filenames_calibration_left = [root.find('filenames_calibration_left').find('abd0
 
 # output model
 folder_model_output = root.find('folder_model_output').text
+if not os.path.exists(folder_model_output):  # create path if it doesn't exist
+    os.makedirs(folder_model_output)
 filename_model_scaled = root.find('filename_model_scaled').text
 path_model_scaled = os.path.join(folder_model_output, filename_model_scaled)
 

@@ -7,7 +7,7 @@
 	<!--path to the folder in which the scale setup is stored-->
 	<folder_scale_setup>path/to/folder/</folder_scale_setup>
 	<!--filename of the scale setup (including .xml)-->
-	<filename_scale_setup>scale_setup.xml</filename_scale_setup>
+	<filename_scale_setup>scale_settings.xml</filename_scale_setup>
 	<!--path to the folder the scaled model will be stored-->
 	<folder_model_output>path/to/folder/</folder_model_output>
 	<!--filename the scaled model will be saved as (including '.osim')-->
@@ -20,17 +20,17 @@
 	<time_range>0 0.01</time_range>
 	<!--filenames of the five marker data files used for the personalization of the scapulohumeral rhythm of the right shoulder-->
 	<filenames_calibration_right>
-		<abd0>right_abd0.trc</abd0>
-		<abd180>right_abd180.trc</abd180>
-		<flex180>right_flex180.trc</flex180>
+		<abd0>right_abd_0.trc</abd0>
+		<abd180>right_abd_180.trc</abd180>
+		<flex180>right_flex_180.trc</flex180>
 		<horiz_abd>right_horiz_abd.trc</horiz_abd>
 		<horiz_add>right_horiz_add.trc</horiz_add>
 	</filenames_calibration_right>
 	<!--filenames of the five marker data files used for the personalization of the scapulohumeral rhythm of the left shoulder-->
 	<filenames_calibration_left>
-		<abd0>left_abd0.trc</abd0>
-		<abd180>left_abd180.trc</abd180>
-		<flex180>left_flex180.trc</flex180>
+		<abd0>left_abd_0.trc</abd0>
+		<abd180>left_abd_180.trc</abd180>
+		<flex180>left_flex_180.trc</flex180>
 		<horiz_abd>left_horiz_abd.trc</horiz_abd>
 		<horiz_add>left_horiz_add.trc</horiz_add>
 	</filenames_calibration_left>
