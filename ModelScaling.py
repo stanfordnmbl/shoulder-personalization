@@ -80,14 +80,16 @@ marker_names = {'Sternum': root.find('marker_names').find('IJ').text,
                 'l_forearm': root.find('marker_names').find('forearm_tracking_marker_l').text
                 }
 
-move_scapula_markers_to_skin = root.find('move_scapula_markers_to_skin').text
-if move_scapula_markers_to_skin:
+move_scapula_markers_to_skin_text = root.find('move_scapula_markers_to_skin').text
+if move_scapula_markers_to_skin_text == "True":
+    move_scapula_markers_to_skin = True
     # distance from scapula locator to skin in mm
     scapula_distance = float(root.find('scapula_distance').text)
     marker_names_scapula_tool = {'AA': root.find('marker_names_scapula_tool').find('AA').text,
                                  'AI': root.find('marker_names_scapula_tool').find('AI').text,
                                  'TS': root.find('marker_names_scapula_tool').find('TS').text}
 else:
+    move_scapula_markers_to_skin = False
     scapula_distance = 0
     marker_names_scapula_tool = None
 
